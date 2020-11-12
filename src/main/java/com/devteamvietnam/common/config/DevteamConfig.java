@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "devteam")
-public class DevteamnConfig
+public class DevteamConfig
 {
     /** project name */
     private String name;
@@ -77,7 +77,7 @@ public class DevteamnConfig
 
     public void setProfile(String profile)
     {
-        DevteamnConfig.profile = profile;
+        DevteamConfig.profile = profile;
     }
 
     public static boolean isAddressEnabled()
@@ -87,7 +87,7 @@ public class DevteamnConfig
 
     public void setAddressEnabled(boolean addressEnabled)
     {
-        DevteamnConfig.addressEnabled = addressEnabled;
+        DevteamConfig.addressEnabled = addressEnabled;
     }
 
     /**
