@@ -6,6 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.devteamvietnam.common.constant.HttpStatus;
+import com.devteamvietnam.common.core.domain.model.LoginUser;
 import com.devteamvietnam.common.exception.CustomException;
 
 /**
