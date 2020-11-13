@@ -13,7 +13,7 @@ import com.devteamvietnam.system.service.ISysDictDataService;
 /**
  * Dictionary business layer processing
  *
- * @author ruoyi
+ * @author ivan
  */
 @Service
 public class SysDictDataServiceImpl implements ISysDictDataService
