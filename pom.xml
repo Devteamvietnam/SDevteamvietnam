@@ -282,6 +282,16 @@
             <artifactId>oshi-core</artifactId>
             <version>5.3.5</version>
         </dependency>
+         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.mchange</groupId>
+                    <artifactId>c3p0</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 	</dependencies>
 	
 
