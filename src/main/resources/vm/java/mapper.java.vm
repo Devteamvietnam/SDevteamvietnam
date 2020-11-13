@@ -1,0 +1,61 @@
+package ${packageName}.mapper;
+
+import java.util.List;
+import ${packageName}.domain.${ClassName};
+
+/**
+ * ${functionName}Mapper interface
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${ClassName}Mapper
+{
+    /**
+     * Query ${functionName}
+     *
+     * @param ${pkColumn.javaField} ${functionName}ID
+     * @return ${functionName}
+     */
+    public ${ClassName} select${ClassName}ById(${pkColumn.javaType} ${pkColumn.javaField});
+
+    /**
+     * Query the list of ${functionName}
+     *
+     * @param ${className} ${functionName}
+     * @return ${functionName} collection
+     */
+    public List<${ClassName}> select${ClassName}List(${ClassName} ${className});
+
+    /**
+     * Added ${functionName}
+     *
+     * @param ${className} ${functionName}
+     * @return result
+     */
+    public int insert${ClassName}(${ClassName} ${className});
+
+    /**
+     * Modify ${functionName}
+     *
+     * @param ${className} ${functionName}
+     * @return result
+     */
+    public int update${ClassName}(${ClassName} ${className});
+
+    /**
+     * Delete ${functionName}
+     *
+     * @param ${pkColumn.javaField} ${functionName}ID
+     * @return result
+     */
+    public int delete${ClassName}ById(${pkColumn.javaType} ${pkColumn.javaField});
+
+    /**
+     * Batch delete ${functionName}
+     *
+     * @param ${pkColumn.javaField}s ID of the data to be deleted
+     * @return result
+     */
+    public int delete${ClassName}ByIds(${pkColumn.javaType}[] ${pkColumn.javaField}s);
+}

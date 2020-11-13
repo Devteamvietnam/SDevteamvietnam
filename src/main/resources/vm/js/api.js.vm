@@ -1,0 +1,53 @@
+import request from'@/utils/request'
+
+// Query the list of ${functionName}
+export function list${BusinessName}(query) {
+  return request({
+    url:'/${moduleName}/${businessName}/list',
+    method:'get',
+    params: query
+  })
+}
+
+// Query the details of ${functionName}
+export function get${BusinessName}(${pkColumn.javaField}) {
+  return request({
+    url:'/${moduleName}/${businessName}/' + ${pkColumn.javaField},
+    method:'get'
+  })
+}
+
+// Add ${functionName}
+export function add${BusinessName}(data) {
+  return request({
+    url:'/${moduleName}/${businessName}',
+    method:'post',
+    data: data
+  })
+}
+
+// Modify ${functionName}
+export function update${BusinessName}(data) {
+  return request({
+    url:'/${moduleName}/${businessName}',
+    method:'put',
+    data: data
+  })
+}
+
+// delete ${functionName}
+export function del${BusinessName}(${pkColumn.javaField}) {
+  return request({
+    url:'/${moduleName}/${businessName}/' + ${pkColumn.javaField},
+    method:'delete'
+  })
+}
+
+// Export ${functionName}
+export function export${BusinessName}(query) {
+  return request({
+    url:'/${moduleName}/${businessName}/export',
+    method:'get',
+    params: query
+  })
+}
