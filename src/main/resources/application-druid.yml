@@ -1,0 +1,57 @@
+# Data source configuration
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: org.mariadb.jdbc.Driver
+        druid:
+            # Main database data source
+            master:
+                url: jdbc:mariadb://localhost:3306/devteamvietnam?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B7
+                username: root
+                password: toor
+            # From the library data source
+            slave:
+                # From the data source switch / default off
+                enabled: false
+                url:
+                username:
+                password:
+            # Initial connections
+            initialSize: 5
+            # Minimum number of connection pools
+            minIdle: 10
+            # Maximum number of connection pools
+            maxActive: 20
+            # Configure the timeout time for obtaining a connection waiting
+            maxWait: 60000
+            # Configure how long the interval is to perform a test to detect idle connections that need to be closed, in milliseconds
+            timeBetweenEvictionRunsMillis: 60000
+            # Configure the minimum survival time of a connection in the pool, in milliseconds
+            minEvictableIdleTimeMillis: 300000
+            # Configure the maximum survival time of a connection in the pool, in milliseconds
+            maxEvictableIdleTimeMillis: 900000
+            # Configure to detect whether the connection is valid
+            validationQuery: SELECT 1 FROM DUAL
+            testWhileIdle: true
+            testOnBorrow: false
+            testOnReturn: false
+            webStatFilter:
+                enabled: true
+            statViewServlet:
+                enabled: true
+                # Set a whitelist, leave it blank to allow all access
+                allow:
+                url-pattern: /druid/*
+                # Console management user name and password
+                login-username:
+                login-password:
+            filter:
+                stat:
+                    enabled: true
+                    # Slow SQL record
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: true
+                wall:
+                    config:
+                        multi-statement-allow: true
